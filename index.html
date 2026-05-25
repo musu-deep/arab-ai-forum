@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>المنتدى العربي للذكاء الاصطناعي والتنمية المستدامة</title>
+  <title>المنتدى الدولي الثاني |  الذكاء الاصطناعي والتنمية المستدامة</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
@@ -346,11 +346,10 @@
   <div class="container hero">
 
     <div>
-      <div class="tag">منتدى ريادة الذكاء الاصطناعي والتنمية المستدامة</div>
+      <div class="tag">المنتدى الدولي الثاني</div>
 
       <h1>
-        المؤتمر الدولي الثاني <span>مستقبل الذكاء الاصطناعي</span>
-        والتنمية والتحول الرقمي
+        آفاق دولية <span>مستقبل الذكاء الاصطناعي</span><br>والتنمية والتحول الرقمي
       </h1>
 
       <p>
@@ -369,8 +368,8 @@
 
       <div class="stats">
         <div class="stat">
-          <h2>10 </h2>
-          <p>دول مشاركة أو ممثلة  </p>
+          <h2>9</h2>
+          <p>دول عالمية وإقليمية</p>
         </div>
 
         <div class="stat">
@@ -385,7 +384,7 @@
 
         <div class="stat">
           <h2>AI</h2>
-          <p>تحول رقمي وتنمية مستدامة</p>
+          <p>مشاريع تحول رقمي واستدامة</p>
         </div>
       </div>
     </div>
@@ -604,9 +603,118 @@
 
 <footer>
   <div class="container">
-    فاس التنموية | منتدى ريادة الذكاء الاصطناعي والتنمية المستدامة © 2026 | بالشراكة مع وجهات السفر 
+    <div style="font-size:1.1rem;font-weight:700;margin-bottom:12px;color:#7cecff;">
+      فاس التنموية | منتدى ريادة الذكاء الاصطناعي والتنمية المستدامة © 2026
+    </div>
+
+    <div style="margin-bottom:10px; color:rgba(255,255,255,.72);">
+      بالشراكة مع وجهات السفر
+    </div>
+
+    <div style="margin-bottom:10px;">
+      Fasdev.org
+    </div>
+
+    <div style="margin-bottom:10px;">
+      fasdevelopment@gmail.com
+    </div>
+
+    <div style="color:#63ffe0;font-weight:700;">
+      واتساب لمزيد من التواصل<br>
+      00201124960586
+    </div>
   </div>
 </footer>
+
+<style>
+.field {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  color: white;
+  margin: 12px 0 20px;
+  font-family: 'Cairo', sans-serif;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #52ffd4;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg,#00c2ff,#00ffb7);
+  color: #041018;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s ease;
+  margin-top: 10px;
+}
+
+.action-btn:hover {
+  transform: translateY(-4px);
+}
+
+.result-box {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  color: rgba(255,255,255,.82);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+  color: #7cecff;
+  font-weight: 700;
+}
+</style>
+
+<script>
+function saveSchedule() {
+  const start = document.getElementById('startDate').value;
+  const end = document.getElementById('endDate').value;
+  const city = document.getElementById('city').value;
+
+  document.getElementById('scheduleResult').innerHTML = `
+    <strong>تم تحديث الجدول التنفيذي:</strong><br><br>
+    📍 المدينة: ${city || 'غير محددة'}<br>
+    📅 البداية: ${start || 'غير محدد'}<br>
+    🏁 النهاية: ${end || 'غير محدد'}
+  `;
+}
+
+function calculateBudget() {
+  const hall = Number(document.getElementById('hallBudget').value || 0);
+  const hotel = Number(document.getElementById('hotelBudget').value || 0);
+  const transport = Number(document.getElementById('transportBudget').value || 0);
+  const marketing = Number(document.getElementById('marketingBudget').value || 0);
+  const tech = Number(document.getElementById('techBudget').value || 0);
+
+  const total = hall + hotel + transport + marketing + tech;
+
+  document.getElementById('budgetResult').innerHTML = `
+    <strong>إجمالي الميزانية التقديرية:</strong><br><br>
+    🏛️ القاعات: ${hall.toLocaleString()}<br>
+    🏨 الفنادق: ${hotel.toLocaleString()}<br>
+    🚘 التنقلات: ${transport.toLocaleString()}<br>
+    📢 التسويق: ${marketing.toLocaleString()}<br>
+    💻 الدعم التقني: ${tech.toLocaleString()}<br><br>
+    <strong style="font-size:1.2rem;color:#63ffe0;">
+      الإجمالي: ${total.toLocaleString()}
+    </strong>
+  `;
+}
+</script>
+
+</body>
 
 </body>
 </html>
